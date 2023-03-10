@@ -72,11 +72,11 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 https://github.com/eerapheal/Full_stack_project.git
 ```
-  Full_stack_project
+ cd Full_stack_project
 ```
 
 
-### Istall
+### Install
 install this project with:
 ```
   bundle install
@@ -113,6 +113,21 @@ To run the project, run `ruby <filename>` in your terminal
 - Twitter: [@ekpenisiraphael](https://twitter.com/ekpenisiraphael)
 - LinkedIn: [ekpenisi-e-raphael-9678a221a](https://www.linkedin.com/in/ekpenisi-e-raphael-9678a221a/)
 
+👤 **JAMES ASIBEY MANU**
+
+- GitHub: [@jaamanu](https://github.com/jaamanu)
+- Twitter: [@jamesasibeymanu](https://twitter.com/jamesasibeymanu)
+- LinkedIn: [jamesasibeymanu](https://linkedin.com/in/jamesasibeymanu)
+
+👤 **Masouma Modarresi**
+
+- GitHub: [@masouma](https://github.com/Masouma864)
+- LinkedIn: [@masouma](https://www.linkedin.com/in/masouma-modarresi)
+
+👤 **Gilbert Okonjo**
+
+- GitHub: [@githubhandle](https://github.com/OpondoG)
+- LinkedIn: [@linkedinn](https://www.linkedin.com/in/gilbert-okonjo/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
