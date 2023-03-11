@@ -4,4 +4,7 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+  User.create(name: "Ralph03")
+  User.create(name: "Hasina")
+  User.create(name: "James")
+  User.create(name: "Gilbert")
