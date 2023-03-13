@@ -1,15 +1,12 @@
 Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      devise_for :users, skip: [:sessions, :registrations],
-        controllers: {
-          sessions: 'api/v1/users/sessions',
-          registrations: 'api/v1/users/registrations',
-        }
+      devise_for :users do
+        resources :registration, only: :create, controller: 'api/v1/users/registration' do 
+          post :cancel, action: :destroy, on: :collection
+        end
+        resources :sessions, only: [:create, :destroy], controller: 'api/v1/users/sessions'
     end
   end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root "root#index"
 end
