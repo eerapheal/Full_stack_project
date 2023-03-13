@@ -5,7 +5,8 @@ class CreateMotorcycles < ActiveRecord::Migration[7.0]
       t.string :image
       t.text :description
       t.decimal :price
-      t.string :motorcycle_type
+      t.string :model
+      t.boolean :available, default: true
 
       t.timestamps
     end
