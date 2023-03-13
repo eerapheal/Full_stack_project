@@ -6,7 +6,7 @@ Rails.application.routes.draw do
           post :cancel, action: :destroy, on: :collection
         end
         resources :sessions, only: [:create, :destroy], controller: 'api/v1/users/sessions'
+      end
     end
   end
-  root "root#index"
 end
