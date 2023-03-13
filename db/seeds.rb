@@ -4,7 +4,9 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-  User.create(name: "Ralph03")
-  User.create(name: "Hasina")
-  User.create(name: "James")
-  User.create(name: "Gilbert")
+  # User.create(name: "Ralph03", email: "charle@gmail.com", password: "power003")
+  # User.create(name: "Hasina", email: "charls@gmail.com", password: "power003")
+  # User.create(name: "James", email: "charley@gmail.com", password: "power003")
+ first_user = User.create([{ name: "milbert"}, { email: "charles@gmail.com"}, { encrypted_password: "power003"}])
+  # User.create(name: "Bob")
+  Motorcycle.create(name: "Ralph", image: "http://", description: "Ralph", motorcycle_type:"JO")
