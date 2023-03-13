@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Api::V1::Users::SessionsController < Devise::SessionsController
   respond_to :json
   # before_action :configure_sign_in_params, only: [:create]
@@ -12,7 +10,7 @@ class Api::V1::Users::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     user = User.find_for_database_authentication(email: params[:user][:email])
-    if user && user.valid_password?(params[:user][:password])
+    if user&.valid_password?(params[:user][:password])
       sign_in(user)
       render json: { message: 'Logged in successfully.', data: user }
     else
@@ -33,8 +31,9 @@ class Api::V1::Users::SessionsController < Devise::SessionsController
   private
 
   def respond_with(_resource, _opts = {})
-  current_user ? log_in_success : log_in_failure
+    current_user ? log_in_success : log_in_failure
   end
+
   def respond_to_on_destroy
     if request.headers['Authorization'].present?
       jwt_payload = JWT.decode(request.headers['Authorization'].split.last,
