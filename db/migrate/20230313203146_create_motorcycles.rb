@@ -7,6 +7,7 @@ class CreateMotorcycles < ActiveRecord::Migration[7.0]
       t.decimal :price
       t.string :model
       t.boolean :available, default: true
+      t.string :color
 
       t.timestamps
     end
