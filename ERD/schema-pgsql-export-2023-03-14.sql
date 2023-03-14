@@ -33,3 +33,7 @@ ALTER TABLE
     "reservation" ADD CONSTRAINT "reservation_motorcycle_id_foreign" FOREIGN KEY("motorcycle_id") REFERENCES "motorcycle"("id");
 ALTER TABLE
     "reservation" ADD CONSTRAINT "reservation_user_id_foreign" FOREIGN KEY("user_id") REFERENCES "User"("id");
+  ALTER TABLE motorcycle
+ADD COLUMN available BOOLEAN NOT NULL;
+  ALTER TABLE motorcycle
+ADD COLUMN model VARCHAR(100) NOT NULL;
