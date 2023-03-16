@@ -1,12 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-  # User.create(name: "Ralph03", email: "charle@gmail.com", password: "power003")
-  # User.create(name: "Hasina", email: "charls@gmail.com", password: "power003")
-  # User.create(name: "James", email: "charley@gmail.com", password: "power003")
- first_user = User.create([{ name: "milbert"}, { email: "charles@gmail.com"}, { encrypted_password: "power003"}])
-  # User.create(name: "Bob")
-  Motorcycle.create(name: "Ralph", image: "http://", description: "Ralph", motorcycle_type:"JO")
+User.create(name: "Bob")
+  Motorcycle.create(name: "Triiumph", image: "https://i.pinimg.com/originals/bc/9d/88/bc9d8815d29d9838d1b60aa0fb32ca60.jpg", description: "1950 Triiumph 6T (GB) in 2020 | Triumph bikes, Classic motorcycles", model:"1950", price:"2", available: true)
+  Motorcycle.create(name: "Vintage", image: "https://silodrome.com/wp-content/uploads/2013/11/Vintage-Triumph-Motorcycle-copy.jpg", description: "Vintage Triumph motorcycle 1930 model NSD 550cc", model:"1930", price:"2", available: true)
+  Motorcycle.create(name: "Bonhams", image: "https://images1.bonhams.com/image?src=Images/live/2007-06/01/7467741-225-1.jpg&width=640&height=480&autosizefit=1", description: "Bonhams : 1933 New Imperial 148cc Model 23 Frame no. 20280 Engine no. 27732", model:"1933", price:"2", available: true)
+  Motorcycle.create(name: "Haziena", image: "http://veh-markets.com/uploads/postfotos/79-yr-old-german-made-express-motorcycle-no-reserve-free-shipping-to-us-1.JPG", description: "79 YR OLD GERMAN MADE EXPRESS MOTORCYCLE, NO RESERVE, FREE SHIPPING TO US", model:"1947", price:"2", available: true)
+  Motorcycle.create(name: "MotoKouture", image: "https://3.bp.blogspot.com/-0Vnu_bM20n0/WuCvOTOz9JI/AAAAAAAALL0/Vu0HqFkshugE6QXkj4mv67h-1wzpgyA5QCLcBGAs/s1600/31290654_780975355426329_4949856981511831552_n.jpg", description: "Triumph Triple Speed Modified Awesomely by MotoKouture Motorcycles", model:"JO", price:"2", available: true)
+  Motorcycle.create(name: "Hayabusa", image: "https://i.pinimg.com/originals/cb/96/c0/cb96c0430fafd69e6b333fd4c565ef9c.jpg", description: "feayi get away bike after a lady colet his phone", model:"JO", price:"2", available: true)
+  Motorcycle.create(name: "Gilberty", image: "https://images.alphacoders.com/173/173393.jpg", description: "Motorcycle  | all in one bike | 1920x1080 ", model:"JO", price:"2", available: true)
+  Motorcycle.create(name: "amanuru", image: "https://euromotors.gr/wordpress/wp-content/uploads/2021/04/2021-Velorex-565.jpg", description: "Sidecar motobike vespa Euro Motors", model:"JO", price:"2", available: true)
+  Motorcycle.create(name: "Rewaco", image: "https://i.pinimg.com/originals/db/27/a1/db27a144ade22648eca47a8ddd6f5b8b.jpg", description: "3 Wheel Motorcycle Rewaco Trikes RF1-LT3 | Trike motorcycle, Trike, Vw trike", model:"JO", price:"2", available: true)
+  Motorcycle.create(name: "BMW", image: "https://cdn.suwalls.com/wallpapers/motorcycles/bmw-r1100s-35058-1920x1200.jpg", description: "BMW R1100S  supper power bike series - #35058", model:"JO", price:"2", available: true)
+  Motorcycle.create(name: "ExoDyne", image: "https://i.pinimg.com/originals/88/9d/f1/889df1e1d8ef7e6ef066236a63f622b6.jpg", description: "“ExoDyne” Electric Motorcycle by Alan Cross | 48 LiPo batteries", model:"JO", price:"2", available: true)
+  Motorcycle.create(name: "PORSCHE", image: "http://images4.fanpop.com/image/photos/16700000/PORSCHE-CUSTOM-CHOPPER-motorcycles-16727521-1024-768.jpg", description: "PORSCHE CUSTOM MOTORCYCLE - Motorcycles Wallpaper (16727521) - Fanpop", model:"JO", price:"2", available: true)
+  Motorcycle.create(name: "Erue03", image: "https://images-na.ssl-images-amazon.com/images/I/71HimcyklPL._AC_SL1500_.jpg", description: "Keeping the Young Spirit Alive With Best Off Road Mini Bikes for Adults", model:"JO", price:"2", available: true)
+  Motorcycle.create(name: "Trailmaster", image: "https://www.tcwestmotorsports.com/wp-content/uploads/2021/01/Trailmaster-Mini-Bike-MB200-Red-RF-scaled.jpg", description: "Trailmaster Mini Bike MB200 TC West Motorsports", model:"JO", price:"2", available: true)
