@@ -19,7 +19,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_203747) do
     t.string "image"
     t.text "description"
     t.decimal "price"
-    t.string "motorcycle_type"
+    t.string "model"
+    t.boolean "available", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -27,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_203747) do
   create_table "reservations", force: :cascade do |t|
     t.bigint "users_id", null: false
     t.bigint "motorcycles_id", null: false
+    t.string "city"
     t.date "start_date"
     t.date "end_date"
     t.datetime "created_at", null: false
@@ -39,17 +41,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_203747) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.string "jti"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["jti"], name: "index_users_on_jti"
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "reservations", "users", column: "motorcycles_id"
+  add_foreign_key "reservations", "motorcycles", column: "motorcycles_id"
   add_foreign_key "reservations", "users", column: "users_id"
 end
