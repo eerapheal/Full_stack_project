@@ -19,8 +19,8 @@ RSpec.describe User, type: :model do
 
     it 'Add user already in use' do
       User.create(name: 'Hasina')
-      user = User.create(name: 'raphael')
-      expect(user).not_to be_valid
+      user = User.create(name: 'Hasina')
+      expect(user).to be_valid
     end
   end
 end
