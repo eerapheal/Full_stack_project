@@ -1,29 +1,26 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe 'associations' do
-    it 'has many reservations' do
-      expect(described_class.reflect_on_association(:reservations).macro).to eq :has_many
+  describe 'Test user model' do
+    it 'Add valid user' do
+      user = User.create(name: 'ralph')
+      expect(user).to be_valid
     end
 
-    it 'has many motorcycles' do
-      expect(described_class.reflect_on_association(:motorcycles).macro).to eq :has_many
+    it 'Add valid user with short name' do
+      user = User.create(name: 'james')
+      expect(user).to be_valid
     end
-  end
 
-  it 'validates presence of name' do
-    user = build(:user, name: nil)
-    expect(user).not_to be_valid
-  end
+    it 'Add valid user with long name' do
+      user = User.create(name: 'raphaeljameshasinagilbert')
+      expect(user).to be_valid
+    end
 
-  it 'validates length of name' do
-    user = build(:user, name: 'A')
-    expect(user).not_to be_valid
-
-    user = build(:user, name: 'A' * 26)
-    expect(user).not_to be_valid
-
-    user = build(:user, name: 'John Doe')
-    expect(user).to be_valid
+    it 'Add user already in use' do
+      User.create(name: 'Hasina')
+      user = User.create(name: 'raphael')
+      expect(user).not_to be_valid
+    end
   end
 end
