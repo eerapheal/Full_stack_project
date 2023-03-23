@@ -2,7 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::ReservationsController, type: :request do
   let(:user) { User.create(name: 'John Doe') }
-  let(:motorcycle) { Motorcycle.create(name: 'gilbert', image: 'him1.png', description: 'kenya nija description', price: 80, model: 'Single') }
+  let(:motorcycle) do
+    Motorcycle.create(name: 'gilbert', image: 'him1.png', description: 'kenya nija description', price: 80,
+                      model: 'Single')
+  end
   let!(:reservation) { Reservation.create(motorcycle_id: motorcycle.id, user_id: user.id) }
 
   describe '#Reservation' do

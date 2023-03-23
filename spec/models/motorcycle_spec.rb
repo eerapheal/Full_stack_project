@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Motorcycle, type: :model do
   before(:each) do
-    @motorcycle = Motorcycle.create(name: 'Motorcycle 1', image: 'Motorcycle1.png', description: 'Motorcycle description', price: 80,
-                        model: 'Single')
+    @motorcycle = Motorcycle.create(name: 'Motorcycle 1', image: 'Motorcycle1.png',
+                                    description: 'Motorcycle description', price: 80,
+                                    model: 'Single')
   end
 
   context 'Testing validations' do

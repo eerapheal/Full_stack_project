@@ -27,7 +27,8 @@ RSpec.describe Api::V1::MotorcyclesController, type: :request do
 
   describe 'GET /api/v1/motorcycles/:id' do
     before do
-      @motorcycle = Motorcycle.create(name: 'gilbert', image: 'him1.png', description: 'kenya nija description', price: 80, model: 'Single')
+      @motorcycle = Motorcycle.create(name: 'gilbert', image: 'him1.png', description: 'kenya nija description',
+                                      price: 80, model: 'Single')
       get "/api/v1/motorcycles/#{@motorcycle.id}"
     end
 
@@ -66,13 +67,13 @@ RSpec.describe Api::V1::MotorcyclesController, type: :request do
 
     context 'with invalid parameters' do
       before { post '/api/v1/motorcycles', params: invalid_params }
-
     end
   end
 
   describe 'DELETE /api/v1/motorcycles/:id' do
     before do
-      @motorcycle = Motorcycle.create(name: 'gilbert', image: 'him1.png', description: 'kenya nija description', price: 80, model: 'Single')
+      @motorcycle = Motorcycle.create(name: 'gilbert', image: 'him1.png', description: 'kenya nija description',
+                                      price: 80, model: 'Single')
       delete "/api/v1/motorcycles/#{@motorcycle.id}"
     end
 
