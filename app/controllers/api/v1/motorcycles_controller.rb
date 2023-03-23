@@ -56,7 +56,6 @@ class Api::V1::MotorcyclesController < ApplicationController
     end
   end
 
-
   private
 
   # method is used as a before_action callback method,
