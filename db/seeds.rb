@@ -13,3 +13,5 @@ User.create(name: "Bob")
   Motorcycle.create(name: "PORSCHE", image: "http://images4.fanpop.com/image/photos/16700000/PORSCHE-CUSTOM-CHOPPER-motorcycles-16727521-1024-768.jpg", description: "PORSCHE CUSTOM MOTORCYCLE - Motorcycles Wallpaper (16727521) - Fanpop", model:"JO", price:"2", available: true)
   Motorcycle.create(name: "Erue03", image: "https://images-na.ssl-images-amazon.com/images/I/71HimcyklPL._AC_SL1500_.jpg", description: "Keeping the Young Spirit Alive With Best Off Road Mini Bikes for Adults", model:"JO", price:"2", available: true)
   Motorcycle.create(name: "Trailmaster", image: "https://www.tcwestmotorsports.com/wp-content/uploads/2021/01/Trailmaster-Mini-Bike-MB200-Red-RF-scaled.jpg", description: "Trailmaster Mini Bike MB200 TC West Motorsports", model:"JO", price:"2", available: true)
+
+  Reservation.create(user_id: 1, motorcycle_id: 2, start_date: Date.today, end_date: Date.today, city: "lagos")

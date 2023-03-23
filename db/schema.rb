@@ -26,15 +26,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_203747) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.bigint "users_id", null: false
-    t.bigint "motorcycles_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "motorcycle_id", null: false
     t.string "city"
     t.date "start_date"
     t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["motorcycles_id"], name: "index_reservations_on_motorcycles_id"
-    t.index ["users_id"], name: "index_reservations_on_users_id"
+    t.index ["motorcycle_id"], name: "index_reservations_on_motorcycle_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,6 +43,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_203747) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "reservations", "motorcycles", column: "motorcycles_id"
-  add_foreign_key "reservations", "users", column: "users_id"
+  add_foreign_key "reservations", "motorcycles"
+  add_foreign_key "reservations", "users"
 end
