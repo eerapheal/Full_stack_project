@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       
             post "/reservations/user/:id", to: "reservations#reserve"
             delete "/reservations/user/:id", to: "reservations#checkout"
-            resources :motorcycles
+            resources :motorcycles, only: [:index, :create, :show, :update, :destroy]
           end
         end
 end
