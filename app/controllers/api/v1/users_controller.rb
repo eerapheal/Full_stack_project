@@ -25,8 +25,8 @@ class Api::V1::UsersController < ApplicationController
         render status: 500, json: { message: 'Something went wrong please try again later.', status: 500 }
       end
     else
-      render status: 200, json: { message: 'User already exist.', id: user.id, name: user.name,
-                                  status: 200 }
+      render status: 400, json: { message: 'User already exist.', id: user.id, name: user.name,
+                                  status: 400 }
     end
   end
 
@@ -35,8 +35,8 @@ class Api::V1::UsersController < ApplicationController
     if user.nil?
       render status: :not_found, json: { message: 'No active user', status: :not_found }
     else
-      reservations = Reservation.where(user_id: params[:id])
-      render status: :ok, json: { message: 'Active Reservation found', data: reservations, status: :ok }
+      reservations = Reservation.where(user_id: params[:id]).includes(:motorcycle)
+      render status: :ok, json: { message: 'Active Reservation found', data: reservations.to_json(include: {motorcycle: {}}), status: :ok }
     end
   end
 end
