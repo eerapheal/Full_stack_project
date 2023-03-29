@@ -9,8 +9,6 @@ Rails.application.routes.draw do
             get "users/:id/reservations", to:"users#reservations",as: "reservations"
       
             post "/reservations/user/:id", to: "reservations#reserve"
-            delete "/reservations/:id", to: "reservations#checkout"
-            resources :motorcycles
           end
         end
 end
