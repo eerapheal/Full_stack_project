@@ -4,8 +4,8 @@ class Api::V1::ReservationsController < ApplicationController
   def reserve
     # add an instance of reservation
     reservation = Reservation.new(city: params[:city], start_date: params[:start_date],
-                                  end_date: params[:end_date], users_id: params[:users_id],
-                                  motorcycles_id: params[:motorcycles_id])
+                                  end_date: params[:end_date], user_id: params[:user_id],
+                                  motorcycle_id: params[:motorcycle_id])
     # Check validation
     if !reservation.valid?
       render status: 400, json: { message: 'O0ops Bad request.', status: 400 }
