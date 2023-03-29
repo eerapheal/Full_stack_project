@@ -13,6 +13,7 @@ class Api::V1::MotorcyclesController < ApplicationController
   # When a user requests this endpoint (e.g. by visiting /motorcycles/1),
   # they will receive a JSON response with the motorcycle record that has an id of 1.
   def show
+    @motorcycle = Motorcycle.find(params[:id])
     render json: @motorcycle
   end
 
