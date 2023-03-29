@@ -1,6 +1,6 @@
 class Motorcycle < ApplicationRecord
   has_many :reservations, dependent: :destroy
-  has_many :users, through: :reservations, dependent: :destroy
+  has_many :user, through: :reservations, dependent: :destroy
 
   validates :name, :price, :description, :image, :model, :available, presence: true
   validates :name, :model, length: { maximum: 1000 }
