@@ -42,8 +42,6 @@ Booking application
 - Postgresql
 - Capybera
 - Rspec
-- Cancancan
-- Devise
 
 ### Key Features <a name="key-features"></a>
 
@@ -87,6 +85,9 @@ install this project with:
   ```
   rails db:migrate
 ```
+```
+rails db:seed
+```
 
 ### Start 
 To start the application, run the following command
@@ -97,9 +98,6 @@ rails server
 ```
 rspec
 ```
-### Usage
-
-To run the project, run `ruby <filename>` in your terminal
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
