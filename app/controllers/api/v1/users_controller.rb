@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
     if user.nil?
       render status: 403, json: { message: 'User does not exist Login to continue.', status: 403 }
     else
-      render status: 200, json: { message: 'Login success', status: 200, data: user }
+      render status: 200, json: { message: 'Login success', status: 200, id: user.id }
     end
   end
 
@@ -36,7 +36,7 @@ class Api::V1::UsersController < ApplicationController
       render status: :not_found, json: { message: 'No active user', status: :not_found }
     else
       reservations = Reservation.where(user_id: params[:id])
-      render status: :ok, json: { message: 'Active Reservation found', data: reservations, status: :ok }
+      render status: :ok, json: { message: 'Active Reservation found', data: reservations.to_json(include: {motorcycle: []}), status: :ok }
     end
   end
 end
