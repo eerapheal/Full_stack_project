@@ -5,9 +5,9 @@ class Api::V1::UsersController < ApplicationController
     # Check available user
     user = User.find_by(name: params[:name])
     if user.nil?
-      render status: 403, json: { message: 'User does not exist Login to continue.', status: 403 }
+      render  json: { status: 'error', message: 'User does not exist SignUp to continue.'},status: 422
     else
-      render status: 200, json: { message: 'Login success', status: 200, data: user }
+      render status: 200, json: { message: 'Login success', status: 200, id: user.id }
     end
   end
 
