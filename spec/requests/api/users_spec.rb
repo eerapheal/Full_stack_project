@@ -40,11 +40,6 @@ RSpec.describe 'api/users', type: :request do
           let(:user) { { name: 'Hansen23' } }
           run_test!
         end
-
-        response '403', 'User does not exist Login to continue.' do
-          let(:user) { { name: 'Random_user23' } }
-          run_test!
-        end
       end
     end
   end

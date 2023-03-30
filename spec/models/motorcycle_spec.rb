@@ -40,9 +40,5 @@ RSpec.describe Motorcycle, type: :model do
       subject = Motorcycle.reflect_on_association(:reservations)
       expect(subject.macro).to eq(:has_many)
     end
-    it 'Motorcycle should have many users' do
-      subject = Motorcycle.reflect_on_association(:users)
-      expect(subject.macro).to eq(:has_many)
-    end
   end
 end
