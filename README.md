@@ -21,12 +21,12 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Ebube App <a name="about-project"></a>
+# 📖 BIKE BOUTIQUE <a name="about-project"></a>
 
 # 📖 Description <a name="Description-Note"></a>
 > Describe your project in 1 or 3 sentences.
 
-Booking application
+BIKE BOUTIQUE is a web application for managing motorcycles renting. The application is built using React for the front-end, Rails for the back-end, and PostgreSQL as the database.
 
 ## Project presentation link
 
