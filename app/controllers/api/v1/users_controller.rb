@@ -35,6 +35,7 @@ class Api::V1::UsersController < ApplicationController
     if user.nil?
       render status: :not_found, json: { message: 'No active user', status: :not_found }
     else
+
       reservations = Reservation.where(user_id: params[:id]).includes(:motorcycle)
       render status: :ok,
              json: { message: 'Active Reservation found',
