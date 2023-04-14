@@ -87,4 +87,7 @@ production:
   <<: *default
   database: Full_stack_project_production
   username: Full_stack_project
+  url: <%= ENV['DATABASE_URL'] 
   password: <%= ENV["FULL_STACK_PROJECT_DATABASE_PASSWORD"] %>
+
+ 
