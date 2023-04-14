@@ -5,8 +5,8 @@ services:
     region: frankfurt # or oregon
     plan: starter
     numInstances: 1
-    buildCommand: ./bin/render-build.sh
-    startCommand: REDIS_URL="redis://${REDIS_HOST}" bundle exec puma -C config/puma.rb
+    buildCommand: bundle install; bundle exec rake assets:precompile; bundle exec rake assets:clean;
+    startCommand: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
     domains:
       - Mororcycle.com # replace with your domain name
     envVars:
