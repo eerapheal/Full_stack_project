@@ -1,14 +1,24 @@
-services:
-  - type: web
+services:      
+    - type: web
     name: Full_stack_project
     env: ruby
-    region: frankfurt # or oregon
+    region: frankfurt
     plan: starter
     numInstances: 1
-    buildCommand: bundle install; bundle exec rake assets:precompile; bundle exec rake assets:clean;
-    startCommand: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
-    domains:
-      - Mororcycle.com # replace with your domain name
-    envVars:
-      - key: DATABASE_URL
-        fromDatabase: name: myapp-db property: connectionString
+    buildCommand: ./bin/render-build.sh
+    startCommand: bundle exec rails server -p $PORT
+  - type: worker
+    name: Full_stack_project
+    env: ruby
+    region: frankfurt
+    plan: starter
+    numInstances: 1
+    buildCommand: ./bin/render-build.sh
+    startCommand: bundle exec sidekiq
+addons:
+  - type: postgres
+    version: "13"
+    name: Full_stack_project
+    env: ruby
+    region: frankfurt
+    plan: starter    
